@@ -1,0 +1,10 @@
+{
+    "bracketSameLine": false,
+    "braceStyle": "stroustrup",
+    "tabWidth": 2,
+    "singleQuote": false,
+    "trailingComma": "es5",
+    "printWidth": 40,
+    "semi": true
+  }
+  
