@@ -1,6 +1,8 @@
 @use "settings/reset";
-@use "settings/colors" as colors;
-@use "settings/buttons" as buttons;
+@use "settings/colors.scss";
+@use "settings/sizes.scss";
+@use "settings/mixins.scss";
+
 
 body {
   background-color: colors.$background-color;
@@ -57,11 +59,15 @@ section {
     }
     .product-item img {
         width: 100%;
-        @include border-radius($border-radius-img);
+        border-radius: 16px;
     }
-
+    
     .product-button {
-        @include button-style($button-color, $button-hover-color);
+      @include mixins.buttons(); 
+        
+        &:hover {
+            background-color: colors.$button-hover-color;
+        }
     }
 
 }

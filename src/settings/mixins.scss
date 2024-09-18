@@ -1,0 +1,13 @@
+@use "colors.scss";
+
+
+@mixin buttons() {
+  display: block;
+  background-color: colors.$button-color;
+  color: colors.$text-color;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 8px;
+  margin-top: 8px;
+  text-decoration: none;
+}
