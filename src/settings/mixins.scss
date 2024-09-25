@@ -1,5 +1,5 @@
 @use "colors.scss";
-
+@use "sizes.scss";
 
 @mixin buttons() {
   display: block;
@@ -10,4 +10,14 @@
   border-radius: 8px;
   margin-top: 8px;
   text-decoration: none;
+}
+
+
+@mixin products-grid($columns) {
+  grid-template-columns: repeat($columns, sizes.$product-columns-width);
+  column-gap: sizes.$column-gap;
+}
+
+@mixin product-spacing {
+    margin-bottom: sizes.$product-margin-bottom;
 }

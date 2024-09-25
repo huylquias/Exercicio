@@ -5,6 +5,14 @@
   font-family: Roboto, sans-serif;
 }
 
+@media screen and (max-width: 767px) {
+  .products {
+    display: block;
+  }
+  .product-item {
+    margin-bottom: 32px;
+  }
+}
 @media screen and (max-width: 1023px) {
   .container {
     max-width: 80%;
@@ -12,14 +20,6 @@
   .products {
     grid-template-columns: repeat(2, 48.5%);
     column-gap: 3%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .products {
-    display: block;
-  }
-  .product-item {
-    margin-bottom: 32px;
   }
 }
 body {
@@ -87,6 +87,24 @@ section .product-button {
 }
 section .product-button:hover {
   background-color: #4cd137;
+}
+
+@media screen and (max-width: 767px) {
+  .products {
+    display: block;
+  }
+  .product-item {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .container {
+    max-width: 80%;
+  }
+  .products {
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

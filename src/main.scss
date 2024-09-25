@@ -3,6 +3,24 @@
 @use "settings/sizes.scss";
 @use "settings/mixins.scss";
 
+@media screen and (max-width: sizes.$mobile) {
+  .products {
+    display: block;
+  }
+  .product-item {
+    margin-bottom: sizes.$product-margin-bottom;
+  }
+}
+
+@media screen and (max-width: sizes.$tablet) {
+  .container {
+    max-width: sizes.$container-max-width;
+  }
+  .products {
+    @include mixins.products-grid(2);
+  }
+}
+
 
 body {
   background-color: colors.$background-color;
@@ -46,30 +64,49 @@ header {
   }
 }
 
-
 section {
-    padding: 56px 0;
-    .products {
-        margin-top: 40px;
-        display: grid;
-        grid-template-columns: repeat(3, 32.66%);
-        column-gap: 1%;
-        row-gap: 4%;
-        width: 100%;
-    }
-    .product-item img {
-        width: 100%;
-        border-radius: 16px;
-    }
-    
-    .product-button {
-      @include mixins.buttons(); 
-        
-        &:hover {
-            background-color: colors.$button-hover-color;
-        }
-    }
+  padding: 56px 0;
+  .products {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(
+      3,
+      32.66%
+    );
+    column-gap: 1%;
+    row-gap: 4%;
+    width: 100%;
+  }
+  .product-item img {
+    width: 100%;
+    border-radius: 16px;
+  }
 
+  .product-button {
+    @include mixins.buttons();
+
+    &:hover {
+      background-color: colors.$button-hover-color;
+    }
+  }
+}
+
+@media screen and (max-width: sizes.$mobile) {
+  .products {
+    display: block;
+  }
+  .product-item {
+    margin-bottom: sizes.$product-margin-bottom;
+  }
+}
+
+@media screen and (max-width: sizes.$tablet) {
+  .container {
+    max-width: sizes.$container-max-width;
+  }
+  .products {
+    @include mixins.products-grid(2);
+  }
 }
 
 
